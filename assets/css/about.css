@@ -17,7 +17,7 @@
 .news-grid { display: grid; grid-template-columns: 1fr 320px; gap: clamp(30px, 4vw, 56px); }
 .sidebar { border-left: 1px solid var(--line); padding-left: clamp(22px, 3vw, 40px); display: grid; gap: 30px; align-content: start; }
 .lead-photo { margin: 0 0 30px; }
-.lead-photo .ph { aspect-ratio: 16 / 9; background: url(../img/about-1600.webp) 50% 55% / cover, linear-gradient(180deg, #C9D8E0 0%, #E8DCC8 55%, #6E8A5E 56%, #3F5B3A 100%); filter: grayscale(.15) contrast(1.02); }
+.lead-photo .ph { aspect-ratio: 16 / 9; background: url(../img/about-coast-1600.webp) 50% 55% / cover, linear-gradient(180deg, #C9D8E0 0%, #E8DCC8 55%, #6E8A5E 56%, #3F5B3A 100%); filter: grayscale(.15) contrast(1.02); }
 .lead-photo figcaption { display: flex; justify-content: space-between; gap: 12px; padding-top: 8px; border-bottom: 1px solid var(--line); padding-bottom: 8px; font: 400 .78rem/1.3 var(--sans); color: var(--ink-soft); font-style: italic; }
 .lead-photo figcaption span { font-style: normal; font-family: var(--mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; }
 .story-cols { column-count: 2; column-gap: 40px; column-rule: 1px solid var(--line-soft); }
@@ -80,5 +80,5 @@
   .rules-head { display: block; }
 }
 @media (prefers-reduced-motion: reduce) { .tools-track, .mb-map .pulse { animation: none; } }
-.lead-photo .ph { background: url(../img/about-1600.webp) 50% 55% / cover, #C9D8E0; }
-@media (max-width: 760px) { .lead-photo .ph { background-image: url(../img/about-900.webp); } }
+.lead-photo .ph { background: url(../img/about-coast-1600.webp) 50% 55% / cover, #C9D8E0; }
+@media (max-width: 760px) { .lead-photo .ph { background-image: url(../img/about-coast-900.webp); } }

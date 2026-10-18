@@ -40,6 +40,10 @@
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
     els.forEach(function (el) { io.observe(el); });
+    // Backup: reveal anything already on screen, in case the observer is slow on a busy page
+    var sweep = function () { var vh = innerHeight; els.forEach(function (el) { if (!el.classList.contains('in') && el.getBoundingClientRect().top < vh * 0.95) el.classList.add('in'); }); };
+    var st = 0; addEventListener('scroll', function () { if (!st) st = setTimeout(function () { st = 0; sweep(); }, 120); }, { passive: true });
+    setTimeout(sweep, 1500);
   } else { els.forEach(function (el) { el.classList.add('in'); }); }
 
   // Layered hero: layers move at different speeds on scroll, drift with the mouse

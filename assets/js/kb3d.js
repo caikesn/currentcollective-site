@@ -26,7 +26,8 @@
 
   // ---- Renderer / scene ----
   var renderer = new T.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  var small = window.innerWidth <= 980;
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, small ? 1.5 : 2));
   renderer.outputEncoding = T.sRGBEncoding;
   renderer.toneMapping = T.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.0;
@@ -54,7 +55,7 @@
   var key = new T.DirectionalLight(0xfff6ee, 1.7);
   key.position.set(-6, 14, 9);
   key.castShadow = true;
-  key.shadow.mapSize.set(2048, 2048);
+  key.shadow.mapSize.set(window.innerWidth <= 980 ? 1024 : 2048, window.innerWidth <= 980 ? 1024 : 2048);
   var sc = key.shadow.camera; sc.left = -10; sc.right = 10; sc.top = 6; sc.bottom = -6; sc.near = 1; sc.far = 40;
   key.shadow.bias = -0.0004; key.shadow.normalBias = 0.02; key.shadow.radius = 4;
   scene.add(key);
@@ -227,7 +228,9 @@
 
   // ---- Loop (only while visible) ----
   var visible = true, raf = 0, clock = new T.Clock();
+  var skip = false;
   function frame() {
+    if (small && (skip = !skip)) { raf = visible ? requestAnimationFrame(frame) : 0; return; }
     var dt = Math.min(clock.getDelta(), 0.05), t = clock.elapsedTime;
     keys.forEach(function (k) { k.cur += (k.target - k.cur) * Math.min(1, dt * 28); k.g.position.y = k.y - k.cur * 0.13; });
     if (!reduce) loose.forEach(function (l) { l.g.position.y = l.y + Math.sin(t * 1.1 + l.ph) * 0.18; l.g.rotation.y += dt * 0.15; });
