@@ -7,7 +7,7 @@
   -webkit-mask-image: linear-gradient(180deg, #000 0 58%, transparent 72%); mask-image: linear-gradient(180deg, #000 0 58%, transparent 72%); }
 .hero.b .notes { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; font-size: .8rem; line-height: 1.45; color: #20321F; }
 .hero.b .notes p { margin: 0; max-width: 26ch; }
-.hero.b .notes b { display: block; font-family: var(--mono); font-weight: 500; font-size: .7rem; letter-spacing: .06em; color: #B4581F; margin-bottom: 6px; }
+.hero.b .notes b { display: block; font-family: var(--mono); font-weight: 500; font-size: .7rem; letter-spacing: .06em; color: #9E4A17; margin-bottom: 6px; }
 .hero.b h1 { position: relative; font-family: var(--sans); font-weight: 800; font-size: clamp(3.6rem, 11.5vw, 11rem); line-height: .86; letter-spacing: -0.055em; color: #C6621F; max-width: none; margin-top: clamp(28px, 5vh, 56px); font-variation-settings: normal; }
 .hero.b h1 .l2 { display: block; padding-left: 14%; }
 .hero.b h1 .em { font-family: var(--serif); font-weight: 300; font-style: italic; letter-spacing: -0.03em; color: #1C3A22; }
