@@ -1,0 +1,9 @@
+# Not part of the website
+_reference/
+PLAN.md
+index-b.html
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,6 @@
+/* Shared "this is a concept" bar for concept sites */
+.cc-bar { position: relative; z-index: 100; display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap; padding: 9px 16px; background: #141A15; color: #F7F4EC; font: 500 .78rem/1.3 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .02em; text-align: center; }
+.cc-bar b { color: #E07A33; font-weight: 500; }
+.cc-bar a { color: #F7F4EC; text-decoration: none; border-bottom: 1px solid #E07A33; padding-bottom: 1px; }
+.cc-note { position: fixed; left: 16px; bottom: 16px; z-index: 90; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; background: #141A15; color: #F7F4EC; font: 500 .74rem/1 'IBM Plex Mono', monospace; text-decoration: none; box-shadow: 0 10px 30px -10px rgba(0,0,0,.5); }
+.cc-note i { width: 8px; height: 8px; border-radius: 50%; background: #E07A33; }

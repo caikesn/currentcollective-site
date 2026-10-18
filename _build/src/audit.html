@@ -1,0 +1,116 @@
+<!--meta
+out: audit/index.html
+title: Free website audit | Current Collective
+description: Send me your website and I'll send back the five things I'd fix first. Free, no contract. For allied health clinics and tradies around Moreton Bay.
+css: pages.css
+nav: audit
+navstyle: solid
+cta: no
+mbar: no
+-->
+<header class="page-hero">
+  <div class="wrap">
+    <span class="label rv">[ Free website audit ]</span>
+    <h1 class="rv" style="--i:1">Find out what's <span class="ink">costing you</span> <span class="em">bookings.</span></h1>
+    <p class="lede rv" style="--i:2">Send me your website. I'll go through it on a phone the way your customers do, run Google's speed test, and send back the five things I'd fix first. In plain English, with no jargon and no obligation.</p>
+    <div class="notes rv" style="--i:3">
+      <p><b>[ 01 ] Free</b>No card, no contract. You get the list either way.</p>
+      <p><b>[ 02 ] Yours to fix</b>Do the fixes yourself, hand them to whoever built your site, or ask me.</p>
+      <p><b>[ 03 ] Fast</b>Usually back to you within a couple of days, by text or email.</p>
+      <p><b>[ 04 ] No website?</b>Pick "I don't have one" and I'll mock up a homepage instead.</p>
+    </div>
+  </div>
+</header>
+
+<section id="request">
+  <div class="wrap split2">
+    <div class="sticky">
+      <div class="rv">
+        <span class="label">[ 01 ] What you get back</span>
+        <h2 style="margin-top:14px">A short list. <span class="soft">Not a 40-page report.</span></h2>
+        <p style="color:var(--ink-soft); font-size:1.08rem; margin-top:18px">Here's a real one I did for a Moreton Bay physio this month, with their name taken out.</p>
+      </div>
+      <div class="sample rv" style="--i:1" aria-label="Example audit">
+        <div class="sample-top">
+          <div><span class="label" style="color:var(--ink-soft)">Sample audit</span><b>A Moreton Bay physio clinic</b><small>Checked Oct 2026 · WordPress</small></div>
+          <div class="ring big"><span>49</span></div>
+        </div>
+        <div class="scores">
+          <div><span>Speed (phone)</span><b class="bad">49</b></div>
+          <div><span>Accessibility</span><b class="mid">83</b></div>
+          <div><span>Best practices</span><b>96</b></div>
+          <div><span>Google basics</span><b>92</b></div>
+        </div>
+        <ol class="finds">
+          <li><b>Takes 5.6 seconds to show anything on a phone</b><span>Fix: compress the banner images and swap the slider for one fixed image.</span></li>
+          <li><b>No Book or Call button at the top</b><span>Fix: a "Book an appointment" button and the phone number in the header.</span></li>
+          <li><b>Phone number only in the footer, and not tappable</b><span>Fix: a tap-to-call number at the top of every page.</span></li>
+          <li><b>No online booking</b><span>Fix: a "Book online" link to their booking system, for people looking at night.</span></li>
+          <li><b>No description written for Google</b><span>Fix: one clear line saying what they do and where.</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <form class="form rv" style="--i:1" name="audit-request" method="POST" data-netlify="true" netlify-honeypot="company_website" action="{R}thanks/" novalidate>
+      <input type="hidden" name="form-name" value="audit-request">
+      <p class="hp"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off"></label></p>
+      <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="gclid"><input type="hidden" name="fbclid"><input type="hidden" name="first_referrer"><input type="hidden" name="landing_page">
+      <span class="label">[ 02 ] Request your audit</span>
+      <fieldset class="field">
+        <legend>What do you need?</legend>
+        <div class="chips">
+          <input type="radio" id="n1" name="need" value="Website audit" data-key="audit" checked><label for="n1">Audit my website</label>
+          <input type="radio" id="n2" name="need" value="Homepage mockup (no website yet)" data-key="new"><label for="n2">I don't have one yet</label>
+        </div>
+      </fieldset>
+      <div class="row2">
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err">Add your name</span></div>
+        <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" autocomplete="organization" required><span class="err">Add your business name</span></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="f-phone">Mobile</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required><span class="err">Add a number I can text</span></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err">Check your email address</span></div>
+      </div>
+      <div class="field site-field"><label for="f-site">Your website <small>(or Facebook page, if that's all you have)</small></label><input id="f-site" name="current_site" placeholder="yourbusiness.com.au"></div>
+      <div class="field"><label for="f-type">Type of business</label>
+        <select id="f-type" name="business_type"><option>Allied health clinic</option><option>Trades or home services</option><option>Disability or NDIS provider</option><option>Something else</option></select>
+      </div>
+      <div class="field"><label for="f-msg">Anything bugging you about it? <small>(optional)</small></label><textarea id="f-msg" name="message" rows="3" placeholder="e.g. we get lots of visits but hardly any bookings"></textarea></div>
+      <button class="btn btn-orange" type="submit">Send me my audit <span class="arr">→</span></button>
+      <p class="form-note">No card, no contract. I'll text you when it's ready.</p>
+      <div class="ok" role="status" aria-live="polite" tabindex="-1">
+        <div class="tick">✓</div>
+        <h3>Got it, thanks.</h3>
+        <p>I'll go through your site and get back to you within a couple of days, usually by text.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="gridbg" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="label">[ 03 ] What I check</span>
+      <h2 style="margin-top:14px">Five things. <span class="soft">The ones that cost bookings.</span></h2>
+    </div>
+    <div class="rows rv">
+      <details><summary><span class="n">[ 01 ]</span>Speed on a phone<span class="p">Google PageSpeed</span><span class="pl"></span></summary><div class="body"><div><p>How long your page takes to show anything on a normal phone connection, and what's slowing it down. Usually it's oversized photos or a slider.</p></div></div></details>
+      <details><summary><span class="n">[ 02 ]</span>Getting enquiries<span class="p">Buttons &amp; forms</span><span class="pl"></span></summary><div class="body"><div><p>Is it obvious how to book, call or ask for a quote? Does the form actually reach you? Can people tap your number?</p></div></div></details>
+      <details><summary><span class="n">[ 03 ]</span>Showing up on Google<span class="p">Search basics</span><span class="pl"></span></summary><div class="body"><div><p>Page titles, the description under your Google result, your suburb and services in the right places, and the link to your Google Business Profile.</p></div></div></details>
+      <details><summary><span class="n">[ 04 ]</span>Trust<span class="p">First impression</span><span class="pl"></span></summary><div class="body"><div><p>Real photos, who you are, what you do and where, opening hours, and whether it looks current. For clinics, I also flag anything that might clash with AHPRA's advertising rules.</p></div></div></details>
+      <details><summary><span class="n">[ 05 ]</span>Tracking<span class="p">Where leads come from</span><span class="pl"></span></summary><div class="body"><div><p>Whether you can see which enquiries came from Google, Facebook or word of mouth, and whether any old tracking code is cluttering the site.</p></div></div></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap split2">
+    <div class="rv"><span class="label">[ 04 ] Questions</span><h2 style="margin-top:14px">Before you <span class="em em-pine">send it</span></h2></div>
+    <div class="rv faq-list" style="--i:1">
+      <details><summary>Why is it free?</summary><p>Because it's the easiest way for you to see how I work. Most people are happy to fix a few things themselves. Some ask me to do it. Either is fine.</p></details>
+      <details><summary>Will you hassle me afterwards?</summary><p>No. I'll send the audit and one follow-up text to check it made sense. If you want a mockup or a quote, you ask.</p></details>
+      <details><summary>Do I need to give you any logins?</summary><p>No. Everything I check is what any visitor can see, plus Google's free public tools.</p></details>
+      <details><summary>What if I don't have a website at all?</summary><p>Choose "I don't have one yet" above. Instead of an audit, I'll mock up a homepage using your details and show it to you on a 15 minute call.</p></details>
+    </div>
+  </div>
+</section>

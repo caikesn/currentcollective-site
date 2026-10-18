@@ -1,0 +1,49 @@
+<!--meta
+out: contact/index.html
+title: Contact | Current Collective
+description: Get in touch with Connor at Current Collective. Book a 15 minute call, email, or send a message.
+css: pages.css
+nav: contact
+navstyle: solid
+cta: no
+mbar: no
+-->
+<header class="page-hero">
+  <div class="wrap">
+    <span class="label rv">[ Contact ]</span>
+    <h1 class="rv" style="--i:1">Let's <span class="em">talk.</span></h1>
+    <p class="lede rv" style="--i:2">Whatever's easiest for you. I usually reply within a day, often by text.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap split2">
+    <div class="rv">
+      <span class="label">[ 01 ] Quickest ways</span>
+      <div class="ways" style="margin-top:18px">
+        <a href="https://calendly.com/con-aikens/30min" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><span><b>Book a 15 minute call</b><span>Pick a time that suits you</span></span><span class="go">→</span></a>
+        <a href="{R}audit/"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><span><b>Get a free website audit</b><span>The five things I'd fix first</span></span><span class="go">→</span></a>
+        <a href="mailto:con.aikens@gmail.com"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></svg></span><span><b>Email</b><span>con.aikens@gmail.com</span></span><span class="go">→</span></a>
+        <a href="https://instagram.com/currentcollectiveagency" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></span><span><b>Instagram</b><span>@currentcollectiveagency</span></span><span class="go">→</span></a>
+      </div>
+    </div>
+    <form class="form rv" style="--i:1" name="contact" method="POST" data-netlify="true" netlify-honeypot="company_website" action="{R}thanks/" novalidate>
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hp"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off"></label></p>
+      <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="gclid"><input type="hidden" name="fbclid"><input type="hidden" name="first_referrer"><input type="hidden" name="landing_page">
+      <span class="label">[ 02 ] Send a message</span>
+      <div class="row2">
+        <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required><span class="err">Add your name</span></div>
+        <div class="field"><label for="c-biz">Business <small>(optional)</small></label><input id="c-biz" name="business" autocomplete="organization"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="c-phone">Mobile</label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required><span class="err">Check your email address</span></div>
+      </div>
+      <input type="hidden" name="need" value="Contact form">
+      <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="5" required></textarea></div>
+      <button class="btn btn-orange" type="submit">Send message <span class="arr">→</span></button>
+      <div class="ok" role="status" aria-live="polite" tabindex="-1"><div class="tick">✓</div><h3>Thanks, got it.</h3><p>I'll get back to you within a day or so.</p></div>
+    </form>
+  </div>
+</section>
