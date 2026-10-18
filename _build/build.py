@@ -23,7 +23,7 @@ SRC = os.path.join(ROOT, "_build", "src")
 SITE = "https://currentcollectiveagency.com/"
 CALENDLY = "https://calendly.com/con-aikens/30min"
 
-NAV = [("work", "Work", "work/"), ("services", "Services", "services/"), ("about", "About", "about/"), ("contact", "Contact", "contact/")]
+NAV = [("home", "Home", ""), ("work", "Work", "work/"), ("services", "Services", "services/"), ("about", "About", "about/"), ("contact", "Contact", "contact/")]
 
 
 def head(m, R):
@@ -61,7 +61,7 @@ def nav(m, R):
     here = m.get("nav", "")
     cur = ' aria-current="page"'
     links = "\n".join(
-        f'        <a href="{R}{href}"{cur if key == here else ""}>{label}</a>' for key, label, href in NAV)
+        f'        <a href="{(R + href) or "./"}"{cur if key == here else ""}>{label}</a>' for key, label, href in NAV)
     solid = " solid" if m.get("navstyle") == "solid" else ""
     return f'''
 <nav class="top{solid}" aria-label="Main">
