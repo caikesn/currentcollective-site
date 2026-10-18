@@ -7,7 +7,7 @@
       var k = s.parentNode.getAttribute('data-prev');
       s.addEventListener('mouseenter', function () { prev.setAttribute('data-k', k); prev.classList.add('on'); });
       s.addEventListener('mouseleave', function () { prev.classList.remove('on'); });
-      s.addEventListener('mousemove', function (e) { prev.style.setProperty('--x', (e.clientX + 24) + 'px'); prev.style.setProperty('--y', (e.clientY - 150) + 'px'); });
+      s.addEventListener('mousemove', function (e) { var x = e.clientX + 24, y = e.clientY - prev.offsetHeight - 22; if (x + 290 > innerWidth) x = e.clientX - 304; prev.style.setProperty('--x', x + 'px'); prev.style.setProperty('--y', Math.max(10, y) + 'px'); });
     });
   }
   var proc = document.querySelector('[data-proc]');

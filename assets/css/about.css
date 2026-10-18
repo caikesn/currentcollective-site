@@ -80,3 +80,5 @@
   .rules-head { display: block; }
 }
 @media (prefers-reduced-motion: reduce) { .tools-track, .mb-map .pulse { animation: none; } }
+.lead-photo .ph { background: url(../img/about-1600.webp) 50% 55% / cover, #C9D8E0; }
+@media (max-width: 760px) { .lead-photo .ph { background-image: url(../img/about-900.webp); } }

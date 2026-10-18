@@ -96,3 +96,6 @@
 .thanks-p { max-width: 46ch; margin: 18px auto 26px; color: rgba(255,255,255,.85); font-size: 1.08rem; }
 .thanks-p a { color: #FFC79A; }
 @media (prefers-reduced-motion: reduce) { .sent-stamp, .mini-card { animation: none; } }
+.sky { background: url(../img/contact-2400.webp) 50% 60% / cover, #3B2A4A; }
+@media (max-width: 760px) { .sky { background-image: url(../img/contact-1200.webp); background-position: 50% 50%; } }
+.theme-post .post-head .label { color: #FFD3B0; }
