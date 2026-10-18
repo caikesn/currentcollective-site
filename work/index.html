@@ -15,12 +15,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../assets/img/current-textured-on-black.png">
 <link rel="apple-touch-icon" href="../assets/img/current-textured-apple-touch-icon.png">
-<meta name="theme-color" content="#F7F4EC">
+<meta name="theme-color" content="#0E1110">
 <link rel="preload" href="../assets/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/site.css">
 <link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="../assets/css/work.css">
 </head>
-<body class="">
+<body class="theme-dark">
 <a class="skip" href="#main">Skip to content</a>
 
 <nav class="top solid" aria-label="Main">
@@ -42,16 +43,25 @@
 </nav>
 
 <main id="main">
-<header class="page-hero">
-  <div class="wrap">
-    <span class="label rv">[ The work ]</span>
-    <h1 class="rv" style="--i:1">Two real builds. <span class="ink">No stock</span> <span class="em">mockups.</span></h1>
-    <p class="lede rv" style="--i:2">I'm just getting started, so this is everything so far. Both are local businesses, both owners have offered to refer me to people they know, and one came from the other.</p>
-    <div class="notes rv" style="--i:3">
-      <p><b>[ 01 ] Synergy</b>Landing page for leasing consulting rooms in Burpengary. Live.</p>
-      <p><b>[ 02 ] TruAssist Tribe</b>11-page WordPress rebuild plus an online training academy. Launching soon.</p>
-      <p><b>[ 03 ] How they found me</b>Synergy was my first client. TruAssist's owner is one of Synergy's tenants.</p>
-      <p><b>[ 04 ] Also</b>IT setup for TruAssist, and posting for Synergy on Facebook.</p>
+<header class="work-hero">
+  <div class="wh-grid" aria-hidden="true"></div>
+  <div class="wrap wh-wrap">
+    <div class="wh-copy">
+      <span class="label rv">[ The work ]</span>
+      <h1 class="rv" style="--i:1">Two real builds.<span class="o">No stock <span class="em">mockups.</span></span></h1>
+      <p class="lede rv" style="--i:2">I'm just getting started, so this is everything so far. Both are local businesses, both owners have offered to refer me to people they know, and one came from the other.</p>
+      <div class="wh-jump rv" style="--i:3"><a href="#synergy"><span>[ 01 ]</span>Synergy</a><a href="#truassist"><span>[ 02 ]</span>TruAssist Tribe</a></div>
+    </div>
+    <div class="kb-stage" aria-hidden="true">
+      <div class="kb">
+        <div class="kb-row"><i class="k">esc</i><i class="k">1</i><i class="k">2</i><i class="k">3</i><i class="k">4</i><i class="k">5</i><i class="k w2">del</i></div>
+        <div class="k-row kb-row"><i class="k w15">tab</i><i class="k o" data-key="W">W</i><i class="k o" data-key="O">O</i><i class="k o" data-key="R">R</i><i class="k o" data-key="K">K</i><i class="k g">Y</i><i class="k">U</i></div>
+        <div class="kb-row"><i class="k w175">caps</i><i class="k">A</i><i class="k g">S</i><i class="k">D</i><i class="k">F</i><i class="k o2">↵</i></div>
+        <div class="kb-row"><i class="k w2">shift</i><i class="k">Z</i><i class="k">X</i><i class="k g">C</i><i class="k">V</i><i class="k w15">shift</i></div>
+        <div class="kb-row"><i class="k">fn</i><i class="k">opt</i><i class="k w15">cmd</i><i class="k space"></i><i class="k o2">→</i></div>
+      </div>
+      <span class="kb-loose k o" style="--x:72%;--y:-6%;--r:18deg">C</span>
+      <span class="kb-loose k" style="--x:86%;--y:12%;--r:-14deg">C</span>
     </div>
   </div>
 </header>
@@ -88,7 +98,7 @@
 </section>
 
 <!-- TruAssist -->
-<section id="truassist" class="gridbg" style="padding-top:0">
+<section id="truassist" style="padding-top:0">
   <div class="wrap">
     <div class="cs-head rv" style="padding-top:clamp(56px,8vw,96px); border-top:1px solid var(--line)">
       <div><span class="label">[ 02 ] TruAssist Tribe</span><h2 style="margin-top:14px">A full rebuild, <span class="soft">plus a place to train their team.</span></h2></div>
@@ -96,8 +106,8 @@
     </div>
     <div class="browser big rv"><div class="chrome"><i></i><i></i><i></i><span>truassisttribe.com.au</span></div><img src="../assets/img/work-truassist.jpg" alt="TruAssist Tribe website for TruTayff Academy" width="1280" height="593" loading="lazy"></div>
     <div class="facts-row rv">
-      <div><b>11 pages</b><span>Moved from Squarespace to WordPress</span></div>
-      <div><b>5.6MB → 300KB</b><span>Main image, so it loads fast on a phone</span></div>
+      <div><b><span data-count="11">11</span> pages</b><span>Moved from Squarespace to WordPress</span></div>
+      <div class="shrink"><b><span data-count-down="5.6" data-to="0.3">5.6</span>MB</b><span>Main image, shrunk from 5.6MB to 300KB</span><i class="bar" aria-hidden="true"><u></u></i></div>
       <div><b>Every old link</b><span>Redirected, so Google traffic still lands</span></div>
       <div><b>Training academy</b><span>Online courses with payments</span></div>
     </div>
@@ -178,5 +188,6 @@
 <div class="mbar"><a class="btn btn-primary" href="../audit/">Get a free website audit <span class="arr">→</span></a></div>
 <script src="../assets/vendor/lenis.min.js" defer></script>
 <script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/work.js" defer></script>
 </body>
 </html>
