@@ -4,6 +4,13 @@
   # No build step: the HTML in this repo is already built.
   # To rebuild after editing _build/src, run:  python _build/build.py
 
+# Concept builds were removed
+[[redirects]]
+  from = "/concepts/*"
+  to = "/work/"
+  status = 301
+  force = true
+
 # Keep source and planning files private
 [[redirects]]
   from = "/_build/*"

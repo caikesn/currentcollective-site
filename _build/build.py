@@ -111,7 +111,7 @@ def footer(m, R):
         <a class="brand" href="{R or './'}"><img src="{R}assets/img/current-textured-on-black.png" alt="" width="28" height="28">Current Collective</a>
         <p style="max-width:34ch">Websites and lead systems for allied health clinics and tradies around Moreton Bay, QLD.</p>
       </div>
-      <div><p class="fh">[ Site ]</p><ul><li><a href="{R}work/">Work</a></li><li><a href="{R}services/">Services</a></li><li><a href="{R}about/">About</a></li><li><a href="{R}concepts/landscaper/">Landscaper concept</a></li><li><a href="{R}concepts/physio/">Physio concept</a></li></ul></div>
+      <div><p class="fh">[ Site ]</p><ul><li><a href="{R}work/">Work</a></li><li><a href="{R}services/">Services</a></li><li><a href="{R}about/">About</a></li></ul></div>
       <div><p class="fh">[ Start ]</p><ul><li><a href="{R}audit/">Free audit</a></li><li><a href="{CALENDLY}" target="_blank" rel="noopener">Book a call</a></li><li><a href="{R}contact/">Contact</a></li></ul></div>
       <div><p class="fh">[ Contact ]</p><ul><li><a href="mailto:con.aikens@gmail.com">con.aikens@gmail.com</a></li><li><a href="https://instagram.com/currentcollectiveagency" target="_blank" rel="noopener">Instagram</a></li><li>Moreton Bay, QLD</li></ul></div>
     </div>

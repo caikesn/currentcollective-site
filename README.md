@@ -15,5 +15,4 @@ The lead system reads these fields: `name`, `phone`, `email`, `message`, `need`,
 
 ## Folders
 - `assets/` CSS, JS, fonts, images
-- `concepts/` concept builds (not real businesses, hidden from Google)
 - `_build/` page sources and the build script (blocked from the live site by `netlify.toml`)

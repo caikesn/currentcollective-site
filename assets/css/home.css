@@ -286,3 +286,6 @@ details[open] summary::after { background: var(--orange); border-color: var(--or
   .hero.b .hero-cards { justify-content: flex-start; }
   .hero.b .stat-a { min-width: 0; width: auto; }
 }
+.card-did { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px; font-size: .95rem; }
+.card-did li { display: grid; grid-template-columns: 18px 1fr; gap: 6px; }
+.card-did li::before { content: "+"; font-family: var(--mono); color: #A9501A; }
