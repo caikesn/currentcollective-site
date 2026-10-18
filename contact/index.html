@@ -19,11 +19,12 @@
 <link rel="preload" href="../assets/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/site.css">
 <link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="../assets/css/contact.css">
 </head>
-<body class="">
+<body class="theme-post">
 <a class="skip" href="#main">Skip to content</a>
 
-<nav class="top solid" aria-label="Main">
+<nav class="top" aria-label="Main">
   <div class="wrap" style="position:relative">
     <div class="bar">
       <a class="brand" href="../"><img src="../assets/img/current-textured-on-black.png" alt="" width="28" height="28">Current Collective</a>
@@ -42,43 +43,46 @@
 </nav>
 
 <main id="main">
-<header class="page-hero">
-  <div class="wrap">
-    <span class="label rv">[ Contact ]</span>
-    <h1 class="rv" style="--i:1">Let's <span class="em">talk.</span></h1>
-    <p class="lede rv" style="--i:2">Whatever's easiest for you. I usually reply within a day, often by text.</p>
-  </div>
-</header>
-
-<section>
-  <div class="wrap split2">
-    <div class="rv">
-      <span class="label">[ 01 ] Quickest ways</span>
-      <div class="ways" style="margin-top:18px">
-        <a href="https://calendly.com/con-aikens/30min" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><span><b>Book a 15 minute call</b><span>Pick a time that suits you</span></span><span class="go">→</span></a>
-        <a href="../audit/"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><span><b>Get a free website audit</b><span>The five things I'd fix first</span></span><span class="go">→</span></a>
-        <a href="mailto:con.aikens@gmail.com"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></svg></span><span><b>Email</b><span>con.aikens@gmail.com</span></span><span class="go">→</span></a>
-        <a href="https://instagram.com/currentcollectiveagency" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></span><span><b>Instagram</b><span>@currentcollectiveagency</span></span><span class="go">→</span></a>
-      </div>
+<section class="post-scene">
+  <div class="sky" role="img" aria-label="Sunset over the water"></div>
+  <div class="wrap post-wrap">
+    <div class="post-head">
+      <span class="label light rv">[ Contact ]</span>
+      <h1 class="rv" style="--i:1">Send me a <em>postcard.</em></h1>
+      <p class="clock rv" style="--i:2"><span class="dot"></span>It's <b data-clock>9:00am</b> in Moreton Bay. I usually reply within a day.</p>
     </div>
-    <form class="form rv" style="--i:1" name="contact" method="POST" data-netlify="true" netlify-honeypot="company_website" action="../thanks/" novalidate>
+
+    <form class="postcard rv" style="--i:2" name="contact" method="POST" data-netlify="true" netlify-honeypot="company_website" action="../thanks/" novalidate>
       <input type="hidden" name="form-name" value="contact">
       <p class="hp"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off"></label></p>
       <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="gclid"><input type="hidden" name="fbclid"><input type="hidden" name="first_referrer"><input type="hidden" name="landing_page">
-      <span class="label">[ 02 ] Send a message</span>
-      <div class="row2">
-        <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required><span class="err">Add your name</span></div>
-        <div class="field"><label for="c-biz">Business <small>(optional)</small></label><input id="c-biz" name="business" autocomplete="organization"></div>
-      </div>
-      <div class="row2">
-        <div class="field"><label for="c-phone">Mobile</label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
-        <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required><span class="err">Check your email address</span></div>
-      </div>
       <input type="hidden" name="need" value="Contact form">
-      <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="5" required></textarea></div>
-      <button class="btn btn-orange" type="submit">Send message <span class="arr">→</span></button>
-      <div class="ok" role="status" aria-live="polite" tabindex="-1"><div class="tick">✓</div><h3>Thanks, got it.</h3><p>I'll get back to you within a day or so.</p></div>
+      <div class="pc-left">
+        <label class="pc-label" for="c-msg">Dear Connor,</label>
+        <textarea id="c-msg" name="message" rows="7" required placeholder="What's on your mind? A website, an audit, a quick question..."></textarea>
+        <span class="pc-from">Greetings from <em>your business</em></span>
+      </div>
+      <div class="pc-right">
+        <div class="stamp-row" aria-hidden="true">
+          <div class="postmark"><svg viewBox="0 0 120 120"><defs><path id="pm" d="M60 14a46 46 0 1 1 0 92a46 46 0 1 1 0-92"/></defs><circle cx="60" cy="60" r="54"/><circle cx="60" cy="60" r="38"/><text><textPath href="#pm">MORETON BAY QLD · 4505 · MORETON BAY QLD ·</textPath></text><text x="60" y="56" text-anchor="middle" class="pm-d" data-pmday>19 OCT</text><text x="60" y="72" text-anchor="middle" class="pm-y">2026</text></svg><i class="wave"></i></div>
+          <div class="stamp"><div class="st-art"><i class="sun"></i><i class="sea"></i></div><span>Current Collective</span><b>$0</b></div>
+        </div>
+        <div class="pc-field"><label for="c-name">Name</label><input id="c-name" name="name" autocomplete="name" required></div>
+        <div class="pc-field"><label for="c-biz">Business <small>(optional)</small></label><input id="c-biz" name="business" autocomplete="organization"></div>
+        <div class="pc-field"><label for="c-phone">Mobile</label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="pc-field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+      </div>
+      <div class="pc-send"><button class="btn btn-orange" type="submit">Post it <span class="arr">→</span></button></div>
+      <div class="ok" role="status" aria-live="polite" tabindex="-1"><div class="tick">✓</div><h3>Posted. Thanks.</h3><p>I'll get back to you within a day or so.</p></div>
     </form>
+
+    <div class="ways-row rv" style="--i:3">
+      <span>Or:</span>
+      <a href="https://calendly.com/con-aikens/30min" target="_blank" rel="noopener">Book a 15 min call →</a>
+      <a href="../audit/">Free website audit →</a>
+      <a href="mailto:con.aikens@gmail.com">con.aikens@gmail.com</a>
+      <a href="https://instagram.com/currentcollectiveagency" target="_blank" rel="noopener">@currentcollectiveagency</a>
+    </div>
   </div>
 </section>
 
@@ -102,5 +106,6 @@
 
 <script src="../assets/vendor/lenis.min.js" defer></script>
 <script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/contact.js" defer></script>
 </body>
 </html>

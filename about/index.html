@@ -19,8 +19,9 @@
 <link rel="preload" href="../assets/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/site.css">
 <link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="../assets/css/about.css">
 </head>
-<body class="">
+<body class="theme-news">
 <a class="skip" href="#main">Skip to content</a>
 
 <nav class="top solid" aria-label="Main">
@@ -42,60 +43,97 @@
 </nav>
 
 <main id="main">
-<header class="page-hero">
+<header class="news-hero">
   <div class="wrap">
-    <span class="label rv">[ About ]</span>
-    <h1 class="rv" style="--i:1">One person. <span class="ink">Start to</span> <span class="em">finish.</span></h1>
+    <div class="masthead rv">
+      <span class="mh-l">Vol. 1 · Moreton Bay edition</span>
+      <b class="mh-name">The Current</b>
+      <span class="mh-r" data-today>Monday 19 October 2026</span>
+    </div>
+    <div class="mh-sub rv"><span>Websites</span><span>Lead systems</span><span>Local</span><span>Price: free audit</span></div>
+    <div class="news-head">
+      <span class="kicker rv">[ About ] Profile</span>
+      <h1 class="rv" style="--i:1">One person. <em>Start to finish.</em></h1>
+      <p class="standfirst rv" style="--i:2">Current Collective is Connor Aikens, a web designer and developer in Moreton Bay. He designs and codes every site himself, so if you message, you get him.</p>
+    </div>
   </div>
 </header>
 
-<section>
-  <div class="wrap split2">
-    <div class="rv">
-      <div class="now-card">
-        <div class="cta-grid" aria-hidden="true"></div>
-        <img src="../assets/img/current-textured-on-black.png" alt="" width="56" height="56">
-        <span class="label light">[ Right now ]</span>
-        <ul>
-          <li><b>Building</b><span>TruAssist Tribe's new site and training academy</span></li>
-          <li><b>Taking on</b><span>New website builds and audits for December</span></li>
-          <li><b>Working from</b><span>Moreton Bay, QLD</span></li>
-        </ul>
-        <div class="now-big">Built in <span class="em">Moreton Bay.</span></div>
+<section class="news-body">
+  <div class="wrap news-grid">
+    <article class="story">
+      <figure class="lead-photo rv"><div class="ph" role="img" aria-label="The Moreton Bay coast from the hinterland"></div><figcaption>The Moreton Bay coastline. <span>Photo: Unsplash</span></figcaption></figure>
+      <div class="story-cols rv">
+        <p class="dropcap">I got into this because I like figuring out how things work, then making them work better. A slow site, a form that never reaches anyone, a phone number you can't tap: each one is a small fix that quietly costs a business bookings.</p>
+        <p>You're not dealing with an account manager or getting passed around. One person quotes it, designs it, builds it and looks after it.</p>
+        <blockquote>"A site that loads in two seconds beats a beautiful one nobody waits for."</blockquote>
+        <p>I'll be honest: <strong>I'm new.</strong> The two businesses on the work page are what I've done so far. That's why the audit is free, so you can judge the work before you spend anything.</p>
+        <p>For clinics, every page follows AHPRA's advertising rules. No clinical testimonials, no "best in town" claims and no promising results.</p>
+        <p class="sig">Connor Aikens</p>
       </div>
-      <div class="facts" style="margin-top:22px">
-        <div class="fact"><span class="k">Based</span><span class="v">Moreton Bay, QLD</span></div>
-        <div class="fact"><span class="k">Builds</span><span class="v">Designed &amp; coded by hand</span></div>
-        <div class="fact"><span class="k">Clinics</span><span class="v">Built to AHPRA rules</span></div>
-        <div class="fact"><span class="k">You own</span><span class="v">Your site and domain</span></div>
-        <div class="fact"><span class="k">Also does</span><span class="v">IT setup &amp; small fixes</span></div>
-        <div class="fact"><span class="k">ABN</span><span class="v">66 107 248 009</span></div>
-      </div>
-    </div>
-    <div class="prose rv" style="--i:1">
-      <span class="label">[ 01 ] Who's building it</span>
-      <h2 style="margin:14px 0 24px">Hi, I'm <span class="em em-pine">Connor.</span></h2>
-      <p>Current Collective is just me. I live in Moreton Bay, and I design and code every site myself. You're not dealing with an account manager or getting passed around. If you message, you get me.</p>
-      <p>I got into this because I like figuring out how things work, then making them work better. A slow site, a form that never reaches anyone, a phone number you can't tap: each one is a small fix that quietly costs a business bookings.</p>
-      <p>I'll be honest, <strong>I'm new.</strong> The two businesses on the work page are what I've done so far,. That's why the audit is free, so you can judge the work before you spend anything.</p>
-      <p>For clinics, every page I build follows AHPRA's advertising rules. No clinical testimonials, no "best in town" claims and no promising results.</p>
-      <div class="sig">Connor Aikens</div>
-      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:26px">
+      <div class="story-cta rv">
         <a class="btn btn-orange" href="../audit/">Get a free audit <span class="arr">→</span></a>
         <a class="btn btn-ghost" href="https://calendly.com/con-aikens/30min" target="_blank" rel="noopener">Book a 15 min call</a>
       </div>
-    </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="now-box rv">
+        <span class="box-h">Right now</span>
+        <ul>
+          <li><b>Building</b><span>A WordPress rebuild with an online training academy</span></li>
+          <li><b>Taking on</b><span>New builds and audits for December</span></li>
+          <li><b>Based</b><span>Moreton Bay, QLD</span></li>
+        </ul>
+      </div>
+      <div class="map-box rv" style="--i:1">
+        <span class="box-h">Where I work</span>
+        <svg class="mb-map" viewBox="0 0 300 340" role="img" aria-label="Map of the Moreton Bay region with suburbs I cover">
+          <defs><pattern id="wv" width="10" height="6" patternUnits="userSpaceOnUse"><path d="M0 3c2.5-2 5-2 7.5 0s5 2 7.5 0" fill="none" stroke="currentColor" stroke-width=".6" opacity=".35"/></pattern></defs>
+          <rect x="180" y="0" width="120" height="340" fill="url(#wv)" class="sea"/>
+          <path class="land" d="M0 0h196c-4 26 6 46 2 70-3 18-14 26-12 44 2 16 12 22 10 40-2 14-18 18-20 34-1 12 10 18 16 26 8 10 4 24-6 30-8 6-10 18-6 30 4 14 0 30-8 44-6 10-8 22-6 42H0z"/>
+          <path class="land" d="M236 18c8 22 10 52 4 86-4 22-10 40-20 54-4-20-2-46 4-72 4-24 6-46 12-68z"/>
+          <path class="road" d="M40 0c10 60 30 110 50 160s40 110 54 180"/>
+          <g class="sub"><circle cx="70" cy="58" r="3"/><text x="64" y="54" text-anchor="end">Caboolture</text></g>
+          <g class="sub"><circle cx="92" cy="96" r="3"/><text x="86" y="92" text-anchor="end">Morayfield</text></g>
+          <g class="sub"><circle cx="118" cy="140" r="3"/><text x="110" y="156" text-anchor="end">Narangba</text></g>
+          <g class="sub"><circle cx="232" cy="62" r="3"/><text x="214" y="48">Bribie Is.</text></g>
+          <g class="sub"><circle cx="160" cy="186" r="3"/><text x="152" y="190" text-anchor="end">Deception Bay</text></g>
+          <g class="sub"><circle cx="128" cy="228" r="3"/><text x="120" y="232" text-anchor="end">North Lakes</text></g>
+          <g class="sub"><circle cx="178" cy="250" r="3"/><text x="186" y="254">Redcliffe</text></g>
+          <g class="sub"><circle cx="110" cy="286" r="3"/><text x="102" y="290" text-anchor="end">Strathpine</text></g>
+          <g class="pin"><circle class="pulse" cx="140" cy="124" r="8"/><path d="M140 124c-9-12-14-19-14-26a14 14 0 0 1 28 0c0 7-5 14-14 26z"/><circle cx="140" cy="98" r="5" fill="#F7F4EC"/><text x="160" y="108" class="pin-t">Burpengary</text></g>
+          <text x="292" y="332" text-anchor="end" class="nts">Not to scale</text>
+        </svg>
+      </div>
+      <div class="facts-box rv" style="--i:2">
+        <span class="box-h">At a glance</span>
+        <dl>
+          <div><dt>Builds</dt><dd>Designed &amp; coded by hand</dd></div>
+          <div><dt>Clinics</dt><dd>Built to AHPRA rules</dd></div>
+          <div><dt>You own</dt><dd>Your site and domain</dd></div>
+          <div><dt>ABN</dt><dd>66 107 248 009</dd></div>
+        </dl>
+      </div>
+    </aside>
   </div>
 </section>
 
-<section class="gridbg" style="padding-top:0">
+<section class="tools" aria-label="Tools I use">
+  <div class="tools-track">
+    <span>HTML, CSS &amp; JavaScript</span><span>WordPress</span><span>Netlify</span><span>GitHub</span><span>Google PageSpeed</span><span>Google Search Console</span><span>Google Business Profile</span><span>Google Workspace</span><span>Microsoft 365</span>
+    <span aria-hidden="true">HTML, CSS &amp; JavaScript</span><span aria-hidden="true">WordPress</span><span aria-hidden="true">Netlify</span><span aria-hidden="true">GitHub</span><span aria-hidden="true">Google PageSpeed</span><span aria-hidden="true">Google Search Console</span><span aria-hidden="true">Google Business Profile</span><span aria-hidden="true">Google Workspace</span><span aria-hidden="true">Microsoft 365</span>
+  </div>
+</section>
+
+<section>
   <div class="wrap">
-    <div class="head rv"><span class="label">[ 02 ] How I work</span><h2 style="margin-top:14px">Four rules. <span class="soft">Every job.</span></h2></div>
-    <div class="principles">
-      <div class="rv"><b>[ 01 ]</b><h3>Fixed quotes</h3><p>You know the price before anything starts. No hourly surprises.</p></div>
-      <div class="rv" style="--i:1"><b>[ 02 ]</b><h3>Plain English</h3><p>No jargon. If I can't explain why a change matters, I won't make it.</p></div>
-      <div class="rv" style="--i:2"><b>[ 03 ]</b><h3>You own it</h3><p>Site and domain in your name. No lock-ins, no hostage hosting.</p></div>
-      <div class="rv" style="--i:3"><b>[ 04 ]</b><h3>Fast, then pretty</h3><p>A site that loads in two seconds beats a beautiful one nobody waits for.</p></div>
+    <div class="rules-head rv"><span class="kicker">[ 02 ] House rules</span><h2>Four rules. <em>Every job.</em></h2></div>
+    <div class="rules">
+      <div class="rv"><b>01</b><h3>Fixed quotes</h3><p>You know the price before anything starts. No hourly surprises.</p></div>
+      <div class="rv" style="--i:1"><b>02</b><h3>Plain English</h3><p>No jargon. If I can't explain why a change matters, I won't make it.</p></div>
+      <div class="rv" style="--i:2"><b>03</b><h3>You own it</h3><p>Site and domain in your name. No lock-ins.</p></div>
+      <div class="rv" style="--i:3"><b>04</b><h3>Fast, then pretty</h3><p>Speed first. Nobody waits for a slow site, however good it looks.</p></div>
     </div>
   </div>
 </section>
@@ -136,5 +174,6 @@
 <div class="mbar"><a class="btn btn-primary" href="../audit/">Get a free website audit <span class="arr">→</span></a></div>
 <script src="../assets/vendor/lenis.min.js" defer></script>
 <script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/about.js" defer></script>
 </body>
 </html>

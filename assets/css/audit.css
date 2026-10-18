@@ -1,5 +1,4 @@
 /* Audit page: blueprint */
-@font-face { font-family: "Caveat"; src: url(../fonts/caveat-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-display: swap; }
 .theme-bp { --paper: #0E2033; --raised: #13293F; --ink: #EAF1F8; --ink-soft: #A3B6CA; --deep: #EAF1F8; --line: rgba(150,190,230,.2); --line-soft: rgba(150,190,230,.1); --pine: #7FD0C0; --pine-tint: rgba(127,208,192,.18); --red: #FF6B57; color-scheme: dark;
   background-color: var(--paper);
   background-image: linear-gradient(rgba(150,190,230,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(150,190,230,.07) 1px, transparent 1px), linear-gradient(rgba(150,190,230,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(150,190,230,.035) 1px, transparent 1px);

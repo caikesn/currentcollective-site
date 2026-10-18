@@ -2,19 +2,29 @@
 out: 404.html
 title: Page not found | Current Collective
 description: That page doesn't exist.
-css: pages.css
+css: pages.css work.css
+body: theme-dark
+theme: #0E1110
 navstyle: solid
 cta: no
 mbar: no
 noindex: yes
 abs: yes
 -->
-<section class="simple">
-  <div class="wrap">
+<section class="nf">
+  <div class="wh-grid" aria-hidden="true"></div>
+  <div class="wrap nf-wrap">
+    <div class="nf-kb" aria-hidden="true">
+      <div class="kb nf-board">
+        <div class="kb-row"><i class="k">esc</i><i class="k o">4</i><i class="k o">0</i><i class="k gap"></i><i class="k">del</i></div>
+        <div class="kb-row"><i class="k w15">tab</i><i class="k">P</i><i class="k g">A</i><i class="k">G</i><i class="k">E</i></div>
+      </div>
+      <i class="k o fallen">4</i>
+    </div>
     <span class="label">[ 404 ]</span>
-    <h1 style="margin-top:16px">Page not <span class="em">found.</span></h1>
-    <p>That page doesn't exist, or it's moved. Ironically, a broken link is one of the things the free audit checks for.</p>
-    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap">
+    <h1>Page not <span class="em">found.</span></h1>
+    <p>That page doesn't exist, or it's moved. A broken link is one of the things the free audit checks for.</p>
+    <div class="nf-btns">
       <a class="btn btn-primary" href="{R}">Back to the home page <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="{R}audit/">Get a free audit</a>
     </div>
