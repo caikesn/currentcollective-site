@@ -1,6 +1,6 @@
 /* Services: swinging price tags, cursor preview, process progress */
 (function () {
-  // Tags: one gentle nudge each time the mouse passes, then a soft settle
+  // Tags: swing like a pendulum when the mouse brushes past (longer string = slower swing)
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var px = null, pt = 0, pvx = 0;
     addEventListener('pointermove', function (e) {
@@ -10,17 +10,19 @@
     }, { passive: true });
     document.querySelectorAll('.tag .swing').forEach(function (el) {
       var a = 0, v = 0, raf = 0, last = 0;
+      var len = parseFloat(getComputedStyle(el.parentNode).getPropertyValue('--len')) || 60;
+      var k = 0.6 / (len + 140), damp = 0.018;
       var step = function () {
-        v += (-0.035 * a - 0.11 * v); a += v;
+        v += (-k * a - damp * v); a += v;
         el.style.transform = 'rotate(' + a.toFixed(2) + 'deg)';
-        if (Math.abs(a) > 0.03 || Math.abs(v) > 0.03) raf = requestAnimationFrame(step);
+        if (Math.abs(a) > 0.01 || Math.abs(v) > 0.01) raf = requestAnimationFrame(step);
         else { raf = 0; a = v = 0; el.style.transform = ''; }
       };
       el.addEventListener('pointerenter', function () {
         var now = performance.now();
-        if (now - last < 500) return;
+        if (now - last < 300) return;
         last = now;
-        v += Math.max(-0.35, Math.min(0.35, pvx * 0.25));
+        v += Math.max(-1.4, Math.min(1.4, pvx * 0.8));
         if (!raf) raf = requestAnimationFrame(step);
       });
     });
