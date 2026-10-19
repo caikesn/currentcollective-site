@@ -1,28 +1,30 @@
 /* Services: swinging price tags, cursor preview, process progress */
 (function () {
-  // Tags: a damped spring, nudged by how fast the mouse moves past
+  // Tags: one gentle nudge each time the mouse passes, then a soft settle
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var px = null, pt = 0, pvx = 0;
+    addEventListener('pointermove', function (e) {
+      var now = performance.now();
+      if (px !== null) pvx = (e.clientX - px) / Math.max(8, now - pt);
+      px = e.clientX; pt = now;
+    }, { passive: true });
     document.querySelectorAll('.tag .swing').forEach(function (el) {
-      var a = 0, v = 0, raf = 0, lastX = null, lastT = 0;
+      var a = 0, v = 0, raf = 0, last = 0;
       var step = function () {
-        v += (-0.06 * a - 0.07 * v); a += v;
+        v += (-0.035 * a - 0.11 * v); a += v;
         el.style.transform = 'rotate(' + a.toFixed(2) + 'deg)';
-        if (Math.abs(a) > 0.02 || Math.abs(v) > 0.02) raf = requestAnimationFrame(step);
+        if (Math.abs(a) > 0.03 || Math.abs(v) > 0.03) raf = requestAnimationFrame(step);
         else { raf = 0; a = v = 0; el.style.transform = ''; }
       };
-      el.addEventListener('pointermove', function (e) {
+      el.addEventListener('pointerenter', function () {
         var now = performance.now();
-        if (lastX !== null && now - lastT < 100) {
-          var speed = (e.clientX - lastX) / Math.max(8, now - lastT);
-          v += Math.max(-1.2, Math.min(1.2, speed * 0.6));
-          if (!raf) raf = requestAnimationFrame(step);
-        }
-        lastX = e.clientX; lastT = now;
+        if (now - last < 500) return;
+        last = now;
+        v += Math.max(-0.35, Math.min(0.35, pvx * 0.25));
+        if (!raf) raf = requestAnimationFrame(step);
       });
-      el.addEventListener('pointerleave', function () { lastX = null; });
     });
   }
-
   var prev = document.querySelector('.prev');
   var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   if (prev && fine) {
