@@ -84,8 +84,9 @@
 .theme-dark .facts-row b span { font: inherit; color: inherit; display: inline; margin: 0; }
 /* real 3D keyboard */
 .kb-stage .kb3d { position: absolute; inset: -12% -14% -12% -10%; width: 124%; height: 124%; display: block; }
-.kb-stage.is-3d .kb, .kb-stage.is-3d .kb-loose { display: none; }
-.kb-stage.is-3d { animation: kbfade 1.2s ease both; }
+.work-hero > .kb-stage .kb, .work-hero > .kb-stage .kb-loose { display: none; }
+.work-hero > .kb-stage.no-3d .kb, .work-hero > .kb-stage.no-3d .kb-loose { display: grid; }
+.work-hero > .kb-stage.no-3d .kb-loose { display: grid; }
 @keyframes kbfade { from { opacity: 0; transform: translateY(20px); } }
 /* real 3D keyboard, big and bleeding off the right */
 .work-hero { min-height: min(100vh, 900px); display: flex; align-items: center; }
@@ -93,8 +94,10 @@
 .work-hero .wh-copy { max-width: 600px; pointer-events: auto; }
 .work-hero > .kb-stage { position: absolute; top: 0; bottom: 0; right: 0; left: 44%; height: auto; z-index: 1; perspective: none; }
 .kb-stage .kb3d { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.kb-stage.is-3d .kb, .kb-stage.is-3d .kb-loose { display: none; }
-.kb-stage.is-3d { animation: kbfade 1.4s ease both; }
+.work-hero > .kb-stage .kb, .work-hero > .kb-stage .kb-loose { display: none; }
+.work-hero > .kb-stage.no-3d .kb, .work-hero > .kb-stage.no-3d .kb-loose { display: grid; }
+.work-hero > .kb-stage.no-3d .kb-loose { display: grid; }
+.kb-stage .kb3d { opacity: 0; transition: opacity 1s ease; } .kb-stage.ready .kb3d { opacity: 1; }
 @keyframes kbfade { from { opacity: 0; transform: translateX(40px); } }
 @media (max-width: 980px) {
   .work-hero { display: block; min-height: 0; padding-bottom: 0; }

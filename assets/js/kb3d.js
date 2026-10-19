@@ -1,11 +1,13 @@
 /* Work page: real-looking 3D keyboard (three.js r149) */
 (function () {
   var stage = document.querySelector('.kb-stage');
-  if (!stage || !window.THREE) return;
+  if (!stage) return;
+  var fail = function () { stage.classList.add('no-3d'); };
+  if (!window.THREE) return fail();
   var T = THREE;
   if (T.ColorManagement) T.ColorManagement.legacyMode = false;
   var test = document.createElement('canvas');
-  if (!(test.getContext('webgl2') || test.getContext('webgl'))) return;
+  if (!(test.getContext('webgl2') || test.getContext('webgl'))) return fail();
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---- Layout (units = one key) ----
@@ -246,6 +248,7 @@
   function go() {
     if (started) return; started = true;
     redraws.forEach(function (d) { d(); });
+    requestAnimationFrame(function () { requestAnimationFrame(function () { stage.classList.add('ready'); }); });
     frame();
   }
   new IntersectionObserver(function (es) { visible = es[0].isIntersecting; if (visible && started && !raf) { clock.getDelta(); frame(); } }).observe(stage);

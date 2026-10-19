@@ -1,5 +1,8 @@
 /* Work page: typing keyboard and counters */
 (function () {
+  // If the 3D keyboard hasn't started in 6s (script blocked or failed), show the flat one
+  var st = document.querySelector('.work-hero > .kb-stage');
+  if (st) setTimeout(function () { if (!st.classList.contains('is-3d')) st.classList.add('no-3d'); }, 6000);
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   // Press W-O-R-K in a loop
   var keys = ['W', 'O', 'R', 'K'].map(function (k) { return document.querySelector('.kb [data-key="' + k + '"]'); }).filter(Boolean);

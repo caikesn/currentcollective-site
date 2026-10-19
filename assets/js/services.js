@@ -1,5 +1,28 @@
-/* Services: cursor preview + process progress */
+/* Services: swinging price tags, cursor preview, process progress */
 (function () {
+  // Tags: a damped spring, nudged by how fast the mouse moves past
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.tag .swing').forEach(function (el) {
+      var a = 0, v = 0, raf = 0, lastX = null, lastT = 0;
+      var step = function () {
+        v += (-0.06 * a - 0.07 * v); a += v;
+        el.style.transform = 'rotate(' + a.toFixed(2) + 'deg)';
+        if (Math.abs(a) > 0.02 || Math.abs(v) > 0.02) raf = requestAnimationFrame(step);
+        else { raf = 0; a = v = 0; el.style.transform = ''; }
+      };
+      el.addEventListener('pointermove', function (e) {
+        var now = performance.now();
+        if (lastX !== null && now - lastT < 100) {
+          var speed = (e.clientX - lastX) / Math.max(8, now - lastT);
+          v += Math.max(-1.2, Math.min(1.2, speed * 0.6));
+          if (!raf) raf = requestAnimationFrame(step);
+        }
+        lastX = e.clientX; lastT = now;
+      });
+      el.addEventListener('pointerleave', function () { lastX = null; });
+    });
+  }
+
   var prev = document.querySelector('.prev');
   var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   if (prev && fine) {
