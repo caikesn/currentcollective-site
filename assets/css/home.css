@@ -206,6 +206,7 @@
 .prices div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 8px 0; }
 .prices .k { color: rgba(247,244,236,.75); }
 .prices .v { font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; }
+.prices .k .setup { font-size: .8rem; color: rgba(247,244,236,.55); white-space: nowrap; }
 .prices .v small { font-size: .8rem; font-weight: 400; color: rgba(247,244,236,.6); letter-spacing: 0; }
 .incl { position: relative; z-index: 1; border-radius: 14px; background: #1E261F; border: 1px solid rgba(247,244,236,.12); padding: 22px 20px 18px; margin-bottom: 24px; }
 .incl .tab { position: absolute; top: -10px; left: 18px; font-family: var(--mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; background: #2A332B; color: rgba(247,244,236,.8); }
